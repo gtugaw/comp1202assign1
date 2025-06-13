@@ -7,14 +7,20 @@ namespace Assignment1
 {
     internal class Program
     {
-        static void GetUserDetails()
+        static string GetUserName()
         {
-            Console.Write("Please enter your course: ");
-            string course = Console.ReadLine();
             Console.Write("Please enter your last name: ");
             string lastName = Console.ReadLine();
             Console.Write("Please enter your first name: ");
             string firstName = Console.ReadLine();
+            return firstName + " " + lastName;
+        }
+
+        static string GetUserCourseCode()
+        {
+            Console.Write("Please enter your course: ");
+            string courseCode = Console.ReadLine();
+            return courseCode;
         }
 
         static void DisplayCongratulateScore(int currentScore)
@@ -47,25 +53,26 @@ namespace Assignment1
             }
         }
 
-        static void DisplayProgressReport(int attemptsQuestionOne, int attemptsQuestionTwo, int attemptsQuestionThree, int attemptsQuestionFour)
+        static void DisplayProgressReport(string fullname, string course, int attemptsQuestionOne, int attemptsQuestionTwo, int attemptsQuestionThree, int attemptsQuestionFour)
         {
-            int totalPoints = 0;
+            int maximumTotalPoints = 100;
 
-            totalPoints = GetPoints(attemptsQuestionOne) + 
-                          GetPoints(attemptsQuestionTwo) + 
-                          GetPoints(attemptsQuestionThree) + 
+            int totalScoredPoints = GetPoints(attemptsQuestionOne) +
+                          GetPoints(attemptsQuestionTwo) +
+                          GetPoints(attemptsQuestionThree) +
                           GetPoints(attemptsQuestionFour);
 
 
+
             Console.WriteLine("PROGRESS REPORT");
-            
-            
-            Console.WriteLine("Percentage score: {0}%", totalPoints);
+            Console.WriteLine("Name: {0}\tCourse Code: {1}", fullname, course);
+            Console.WriteLine("Total points scored: {0} of {1}", totalScoredPoints, maximumTotalPoints);
+            Console.WriteLine("Percentage score: {0:F2}%", totalScoredPoints * 100 / maximumTotalPoints);
         }
 
         static int GetPoints(int attempts)
         {
-            switch(attempts)
+            switch (attempts)
             {
                 case 1:
                     return 25;
@@ -80,13 +87,14 @@ namespace Assignment1
             }
         }
 
-        
+
 
         static void Main(string[] args)
         {
             string courseCode = "";
             string firstName = "";
             string lastname = "";
+            string fullname = "";
 
             int firstQuestionAttempts = 1;
             int secondQuestionAttempts = 4;
@@ -98,11 +106,14 @@ namespace Assignment1
 
 
 
-            GetUserDetails();
+            fullname = GetUserName();
+            courseCode = GetUserCourseCode();
+
+
             DisplayQuestion();
             DisplayCongratulateScore(99);
 
-            DisplayProgressReport(firstQuestionAttempts, secondQuestionAttempts, thirdQuestionAttempts, fourthQuestionAttempts);
+            DisplayProgressReport(fullname, courseCode,firstQuestionAttempts, secondQuestionAttempts, thirdQuestionAttempts, fourthQuestionAttempts);
 
             Console.ReadKey();
         }
