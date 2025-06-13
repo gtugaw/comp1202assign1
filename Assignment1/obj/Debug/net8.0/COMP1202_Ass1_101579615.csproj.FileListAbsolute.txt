@@ -1,0 +1,15 @@
+C:\Users\gtuga\Source\Repos\comp1202assign1\Assignment1\bin\Debug\net8.0\COMP1202_Ass1_101579615.exe
+C:\Users\gtuga\source\repos\comp1202assign1\Assignment1\bin\Debug\net8.0\COMP1202_Ass1_101579615.deps.json
+C:\Users\gtuga\source\repos\comp1202assign1\Assignment1\bin\Debug\net8.0\COMP1202_Ass1_101579615.runtimeconfig.json
+C:\Users\gtuga\Source\Repos\comp1202assign1\Assignment1\bin\Debug\net8.0\COMP1202_Ass1_101579615.dll
+C:\Users\gtuga\Source\Repos\comp1202assign1\Assignment1\bin\Debug\net8.0\COMP1202_Ass1_101579615.pdb
+C:\Users\gtuga\Source\Repos\comp1202assign1\Assignment1\obj\Debug\net8.0\COMP1202_Ass1_101579615.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gtuga\Source\Repos\comp1202assign1\Assignment1\obj\Debug\net8.0\COMP1202_Ass1_101579615.AssemblyInfoInputs.cache
+C:\Users\gtuga\Source\Repos\comp1202assign1\Assignment1\obj\Debug\net8.0\COMP1202_Ass1_101579615.AssemblyInfo.cs
+C:\Users\gtuga\Source\Repos\comp1202assign1\Assignment1\obj\Debug\net8.0\COMP1202_Ass1_101579615.csproj.CoreCompileInputs.cache
+C:\Users\gtuga\Source\Repos\comp1202assign1\Assignment1\obj\Debug\net8.0\COMP1202_Ass1_101579615.sourcelink.json
+C:\Users\gtuga\Source\Repos\comp1202assign1\Assignment1\obj\Debug\net8.0\COMP1202_Ass1_101579615.dll
+C:\Users\gtuga\Source\Repos\comp1202assign1\Assignment1\obj\Debug\net8.0\refint\COMP1202_Ass1_101579615.dll
+C:\Users\gtuga\Source\Repos\comp1202assign1\Assignment1\obj\Debug\net8.0\COMP1202_Ass1_101579615.pdb
+C:\Users\gtuga\source\repos\comp1202assign1\Assignment1\obj\Debug\net8.0\COMP1202_Ass1_101579615.genruntimeconfig.cache
+C:\Users\gtuga\source\repos\comp1202assign1\Assignment1\obj\Debug\net8.0\ref\COMP1202_Ass1_101579615.dll
