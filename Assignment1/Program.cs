@@ -17,6 +17,8 @@
             Console.WriteLine("Congratulations you got it correct. SCORE: {0}",currentScore);
         }
 
+
+
         static void Main(string[] args)
         {
             GetUserDetails();
