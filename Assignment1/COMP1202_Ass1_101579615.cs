@@ -3,29 +3,29 @@
 //Name: TUGAWIN, GENESIS
 //Student ID: 101579615
 
-namespace Assignment1
+namespace Comp1202
 {
-    internal class Program
+    internal class Assignment01
     {
         static string GetUserName()
         {
-            Console.Write("Please enter your last name: ");
+            Console.Write("Enter your last name: ");
             string lastName = Console.ReadLine();
-            Console.Write("Please enter your first name: ");
+            Console.Write("Enter your first name: ");
             string firstName = Console.ReadLine();
             return firstName + " " + lastName;
         }
 
         static string GetUserCourseCode()
         {
-            Console.Write("Please enter your course: ");
+            Console.Write("Enter your course code: ");
             string courseCode = Console.ReadLine();
             return courseCode;
         }
 
-        static void DisplayCongratulateScore(int currentScore)
+        static void DisplayCongratsMessageScore(int currentScore)
         {
-            Console.WriteLine("Congratulations you got it correct. SCORE: {0}", currentScore);
+            Console.WriteLine("You got it correct! Current score: {0}", currentScore);
         }
 
         static void DisplayQuestion()
@@ -36,16 +36,20 @@ namespace Assignment1
             switch (randomQuestionNumber)
             {
                 case 1:
-                    Console.WriteLine("Question 1: What is the capital of France?");
+                    Console.WriteLine("Question No. {0}: What is the fastest land animal?", randomQuestionNumber);
+                    Console.WriteLine("\tA. Lion\n\tB. Cheetah\n\tC. Greyahound\n\tD: Horse\n\tE. Kangaroo");
                     break;
                 case 2:
-                    Console.WriteLine("Question 2: What is the largest planet in our solar system?");
+                    Console.WriteLine("Question No. {0}: What planet in our solar system has the most moons?", randomQuestionNumber);
+                    Console.WriteLine("\tA. Earth\n\tB. Mars\n\tC. Jupiter\n\tD: Saturn\n\tE. Neptune");
                     break;
                 case 3:
-                    Console.WriteLine("Question 3: Who wrote 'To Kill a Mockingbird'?");
+                    Console.WriteLine("Question No. {0}: What is the national dish of Japan?", randomQuestionNumber);
+                    Console.WriteLine("\tA. Sushi\n\tB. Ramen\n\tC. Tempura\n\tD: Curry Rice\n\tE. Okonomiyaki");
                     break;
                 case 4:
-                    Console.WriteLine("Question 3: Who wrote 'To Kill a Mockingbird'?");
+                    Console.WriteLine("Question No. {0}: Which of these board games is based on buying and trading properties?", randomQuestionNumber);
+                    Console.WriteLine("\tA. Chess\n\tB. Scrabble\n\tC. Monopoly\n\tD: Risk\n\tE. Clue");
                     break;
                 default:
                     Console.WriteLine("No more questions available.");
@@ -53,7 +57,7 @@ namespace Assignment1
             }
         }
 
-        static void DisplayProgressReport(string fullname, string course, int attemptsQuestionOne, int attemptsQuestionTwo, int attemptsQuestionThree, int attemptsQuestionFour)
+        static void DisplayProgressReport(string fullname, string courseCode, int attemptsQuestionOne, int attemptsQuestionTwo, int attemptsQuestionThree, int attemptsQuestionFour)
         {
             int maximumTotalPoints = 100;
 
@@ -65,8 +69,17 @@ namespace Assignment1
 
 
             Console.WriteLine("PROGRESS REPORT");
-            Console.WriteLine("Name: {0}\tCourse Code: {1}", fullname, course);
-            Console.WriteLine("Total points scored: {0} of {1}", totalScoredPoints, maximumTotalPoints);
+            Console.WriteLine("Name: {0}", fullname);
+            Console.WriteLine("Course Code: {0}", courseCode);
+
+            int questionNumber = 1;
+
+            
+            Console.WriteLine("Question 1: Attempts({0}), Points({1})", attemptsQuestionOne, GetPoints(attemptsQuestionOne));
+            Console.WriteLine("Question 2: Attempts({0}), Points({1})", attemptsQuestionTwo, GetPoints(attemptsQuestionTwo));
+            Console.WriteLine("Question 3: Attempts({0}), Points({1})", attemptsQuestionThree, GetPoints(attemptsQuestionThree));
+            Console.WriteLine("Question 4: Attempts({0}), Points({1})", attemptsQuestionFour, GetPoints(attemptsQuestionFour));
+            Console.WriteLine("Total points scored: {0}", totalScoredPoints);
             Console.WriteLine("Percentage score: {0:F2}%", totalScoredPoints * 100 / maximumTotalPoints);
         }
 
@@ -111,7 +124,7 @@ namespace Assignment1
 
 
             DisplayQuestion();
-            DisplayCongratulateScore(99);
+            DisplayCongratsMessageScore(99);
 
             DisplayProgressReport(fullname, courseCode,firstQuestionAttempts, secondQuestionAttempts, thirdQuestionAttempts, fourthQuestionAttempts);
 
